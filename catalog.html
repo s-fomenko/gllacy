@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Gllacy Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="content-wrapper">
+        <header class="main-header">
+          <img class="header-logo" src="http://placehold.it/160x65" alt="Gllacy Shop">
+          <!-- Не лишний ли здесь nav? Стилизовать и список можно -->
+          <nav class="main-navigation">
+            <ul>
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li>
+                <a href="#">О Компании</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Так нормально или сделать списком? -->
+          <div class="user-block">
+            <a class="search" href="#">Поиск</a>
+            <a class="login" href="#">Вход</a>
+            <a class="cart" href="#">Пусто</a>
+          </div>
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">Сливочное</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-contacts">
+            <p>с 10 до 20, ежедневно<span>8 812 450-25-25</span></p>
+          </div>
+        </header>
+        <main class="main-content">
+          <h1>Сливочное мороженое</h1>
+          <div class="menu">
+            <div class="features-category">
+              <span>Сортировка:</span>
+              <!-- Здесь будет select или поп-ап на js -->
+              <a href="#">по популярности</a>
+            </div>
+            <form class="features-select" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="features-select1">
+                <legend>Цена: 100 руб. - 500 руб.</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="features-select2">
+                <legend>Жирность:</legend>
+                <div class="features-select-item">
+                  <input id="fat1" type="radio" name="fat" value="0%">
+                  <label for="fat1">0%</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fat2" type="radio" name="fat" value="10%" checked>
+                  <label for="fat2">До 10%</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fat3" type="radio" name="fat" value="less 30%">
+                  <label for="fat3">до 30%</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fat4" type="radio" name="fat" value="more 30%">
+                  <label for="fat4">выше 30%</label>
+                </div>
+              </fieldset>
+              <fieldset class="features-select3">
+                <legend>Наполнители:</legend>
+                <div class="features-select-item">
+                  <input id="fillers1" type="checkbox" name="fillers" value="chocolate" checked>
+                  <label for="fillers1">шоколадные</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fillers2" type="checkbox" name="fillers" value="sugar" checked>
+                  <label for="fillers2">сахарные присыпки</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fillers3" type="checkbox" name="fillers" value="fruit">
+                  <label for="fillers3">фрукты</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fillers4" type="checkbox" name="fillers" value="syrup">
+                  <label for="fillers4">сиропы</label>
+                </div>
+                <div class="features-select-item">
+                  <input id="fillers5" type="checkbox" name="fillers" value="jam">
+                  <label for="fillers5">джемы</label>
+                </div>
+              </fieldset>
+              <button class="btn" type="submit">Применить</button>
+            </form>
+          </div>
+          <div class="catalog">
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>310&#8381;</span>/кг</p>
+              <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>380&#8381;</span>/кг</p>
+              <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>355&#8381;</span>/кг</p>
+              <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>415&#8381;</span>/кг</p>
+              <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>325&#8381;</span>/кг</p>
+              <a href="#">Сливочное с брусничным джемом</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>410&#8381;</span>/кг</p>
+              <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>375&#8381;</span>/кг</p>
+              <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>320&#8381;</span>/кг</p>
+              <a href="#">Сливочное с шоколадной стружкой</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>440&#8381;</span>/кг</p>
+              <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>435&#8381;</span>/кг</p>
+              <a href="#">Сливочное с ментоловым сиропом</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>355&#8381;</span>/кг</p>
+              <a href="#">Сливочное с кусочками черного шоколада</a>
+            </div>
+            <div class="ice-cream-item">
+              <!-- TODO: Дать классы элементам -->
+              <img src="http://placehold.it/270x270" alt="Мороженое">
+              <p><span>420&#8381;</span>/кг</p>
+              <a href="#">Сливочное с мятным сиропом</a>
+            </div>
+          </div>
+          <div class="pages">
+            <a class="pages-btn" href="#">prev</a>
+            <a class="pages-btn" href="#">1</a>
+            <a class="pages-btn" href="#">2</a>
+            <a class="pages-btn" href="#">3</a>
+            <a class="pages-btn" href="#">4</a>
+            <a class="pages-btn" href="#">5</a>
+            <a class="pages-btn" href="#">next</a>
+          </div>
+        </main>
+        <footer class="main-footer">
+          <div class="footer-social">
+            <ul>
+              <li>
+                <a href="#">Twitter</a>
+              </li>
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="#">Facebook</a>
+              </li>
+              <li>
+                <a href="#">В Контакте</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-documents">
+            <ul>
+              <li>
+                <a href="#">Для поставщиков</a>
+              </li>
+              <li>
+                <a href="#">Наши документы</a>
+              </li>
+              <li>
+                <a href="#">О производстве</a>
+              </li>
+              <li>
+                <a href="#">Экологические стандарты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-copyright">
+            <img src="http://placehold.it/120x40" alt="HTML Academy">
+            <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &#169; 2016</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
