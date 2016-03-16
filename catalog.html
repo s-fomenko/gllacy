@@ -12,7 +12,7 @@
       <div class="content-wrapper">
         <header class="main-header">
           <img class="header-logo" src="http://placehold.it/160x65" alt="Gllacy Shop">
-          <!-- Не лишний ли здесь nav? Стилизовать и список можно -->
+
           <nav class="main-navigation">
             <ul>
               <li>
@@ -26,42 +26,38 @@
               </li>
             </ul>
           </nav>
-          <!-- Так нормально или сделать списком? -->
+
           <div class="user-block">
-            <a class="search" href="#">Поиск</a>
-            <a class="login" href="#">Вход</a>
-            <a class="cart" href="#">Пусто</a>
-          </div>
-          <div class="breadcrumbs">
-            <ul>
-              <li>
-                <a href="#">Главная</a>
-              </li>
-              <li>
-                <a href="#">Каталог</a>
-              </li>
-              <li>
-                <a href="#">Сливочное</a>
-              </li>
-            </ul>
+            <!-- Нужны ли классы дивам? -->
+            <div>
+              <a class="user-block-item search" href="#">Поиск</a>
+            </div>
+            <div>
+              <a class="user-block-item login" href="#">Вход</a>
+            </div>
+            <div>
+              <a class="user-block-item cart" href="#">Пусто</a>
+            </div>
           </div>
           <div class="header-contacts">
-            <p>с 10 до 20, ежедневно<span>8 812 450-25-25</span></p>
+            <p>с 10 до 20, ежедневно<p>
+            <div>8 812 450-25-25</div>
           </div>
         </header>
 
         <main class="main-content">
-        <!-- добавить класс -->
-          <h1>Сливочное мороженое</h1>
-          <!-- фильтр -->
-          <div class="menu">
-          <!-- форма начинается перед сортировкой -->
-            <div class="features-category">
-              <span>Сортировка:</span>
-              <!-- Здесь будет select!-->
-              <a href="#">по популярности</a>
-            </div>
+          <h1 class="main-contant-header">Сливочное мороженое</h1>
+          <div class="filter">
             <form class="features-select" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="features-select">
+                <legend>Сортировка:</legend>
+                <select>
+                  <option>По популярности</option>
+                  <option>Сначала недорогие</option>
+                  <option>Сначала дорогие</option>
+                  <option> По жирности</option>
+                </select>
+              </fieldset>
               <fieldset class="features-select">
                 <legend>Цена: 100 руб. - 500 руб.</legend>
                 <div class="range-filter">
@@ -93,7 +89,7 @@
                   <label for="fat4">выше 30%</label>
                 </div>
               </fieldset>
-              <fieldset class="features-select3">
+              <fieldset class="features-select">
                 <legend>Наполнители:</legend>
                 <div class="features-select-item">
                   <input id="fillers1" type="checkbox" name="fillers" value="chocolate" checked>
@@ -122,76 +118,100 @@
           <div class="catalog">
             <div class="catalog-list">
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>310&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>310&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>380&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>380&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>355&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>355&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>415&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>415&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>325&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>325&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с брусничным джемом</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>410&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>410&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>375&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>375&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>320&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>320&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с шоколадной стружкой</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>440&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>440&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>435&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>435&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с ментоловым сиропом</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>355&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>355&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с кусочками черного шоколада</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>420&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>420&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с мятным сиропом</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
             </div>
             <div class="pages">
@@ -210,16 +230,16 @@
           <div class="footer-social">
             <ul>
               <li>
-                <a href="#">Twitter</a>
+                <a class="social social-twitter" href="#">Twitter</a>
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <a class="social social-instagram" href="#">Instagram</a>
               </li>
               <li>
-                <a href="#">Facebook</a>
+                <a class="social social-facebook" href="#">Facebook</a>
               </li>
               <li>
-                <a href="#">В Контакте</a>
+                <a class="social social-vk" href="#">В Контакте</a>
               </li>
             </ul>
           </div>

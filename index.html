@@ -20,9 +20,25 @@
           <nav class="main-navigation">
             <ul>
               <li>
-                <a href="#">Каталог</a>
+                <a href="catalog.html">Каталог</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="#">Новинки</a>
+                  </li>
+                  <li>
+                    <a href="#">Сливочное</a>
+                  </li>
+                  <li>
+                    <a href="#">Щербеты</a>
+                  </li>
+                  <li>
+                    <a href="#">Фруктовый лед</a>
+                  </li>
+                  <li>
+                    <a href="#">Мелорин</a>
+                  </li>
+                </ul>
               </li>
-              <!-- посмотреть на других сайтах подменю -->
               <li>
                 <a href="#">Доставка и оплата</a>
               </li>
@@ -33,27 +49,36 @@
           </nav>
 
           <div class="user-block">
-          <!-- добавить дивы -->
-            <a class="user-block-item search" href="#">Поиск</a>
-            <a class="user-block-item login" href="#">Вход</a>
-            <a class="user-block-item cart" href="#">Пусто</a>
+            <!-- Нужны ли классы дивам? -->
+            <div>
+              <a class="user-block-item search" href="#">Поиск</a>
+            </div>
+            <div>
+              <a class="user-block-item login" href="#">Вход</a>
+            </div>
+            <div>
+              <a class="user-block-item cart" href="#">Пусто</a>
+            </div>
           </div>
           <div class="header-contacts">
             <p>с 10 до 20, ежедневно<p>
             <div>8 812 450-25-25</div>
+          </div>
         </header>
 
         <div class="slider">
           <div class="slide" id="slide1">
-          <!-- картинки контентные -->
+            <img class="header-logo" src="http://placehold.it/650x560" alt="Мороженое">
             <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
             <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
           <div class="slide" id="slide2">
+            <img class="header-logo" src="http://placehold.it/650x560" alt="Мороженое">
             <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
             <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
           <div class="slide" id="slide3">
+            <img class="header-logo" src="http://placehold.it/650x560" alt="Мороженое">
             <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
             <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
@@ -67,14 +92,13 @@
 
           <section class="goods">
             <div class="action">
-            <!-- меняем класс и добавляем заголовку класс -->
               <div class="action-item">
-                <h2>Малинка даром!</h2>
+                <h2 class="action-header">Малинка даром!</h2>
                 <p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="btn" href="#">Хочу варенье!</a>
               </div>
               <div class="action-item">
-                <h2>Шоколадки даром!</h2>
+                <h2 class="action-header">Шоколадки даром!</h2>
                 <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
                 <a class="btn" href="#">Хочу шоколадки!</a>
               </div>
@@ -82,44 +106,51 @@
 
             <div class="ice-cream">
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <!-- нужен див -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>310&#8381;</span>/кг</p>
-                нужен див
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>310&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-                <!-- добавить элемент -->
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>380&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>380&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>355&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>355&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
               <div class="ice-cream-item">
-                <!-- TODO: Дать классы элементам -->
-                <img src="http://placehold.it/270x270" alt="Мороженое">
-                <p><span>415&#8381;</span>/кг</p>
+                <div>
+                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <p class="ice-cream-paragraph"><span>415&#8381;</span>/кг</p>
+                </div>
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                <a class="btn" href="#">Быстрый просмотр</a>
               </div>
             </div>
           </section>
           <div class="about">
-          <!-- нужен класс -->
-            <h3>Магазин Глейси -это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
-            <!-- убрать дивы и сделать 4 дива с параграфом . у каждого дива два класса, оин общий и один для иконки-->
-            <div class="about-left">
+            <h3 class="about-header">Магазин Глейси -это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
+            <div class="article article-ice-cream">
               <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+            </div>
+            <div class="article article-cow">
               <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </div>
-            <div class="about-right">
+            <div class="article article-leaf">
               <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+            </div>
+            <div class="article article-thermometer">
               <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
             </div>
           </div>
@@ -127,16 +158,13 @@
           <div class="news">
             <div class="news-blog">
               <p>Новое в нашем блоге</p>
-              <!-- добавить в ссылку заголовок с классом -->
-              <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+              <a href="#"><h3 class="news-header">10 способов сервировки фруктовых щербетов к столу</h3></a>
             </div>
             <div class="news-subscription">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
               <form action="https://echo.htmlacademy.ru" method="post">
                 <input type="text" name="mail" value="Электронная почта">
-                <!-- поменять на баттон -->
                 <button type="submit"> Отправить</button>
-                <input type="submit">
               </form>
             </div>
           </div>
@@ -145,28 +173,28 @@
           <!-- Карта Google -->
           <!-- TODO: Как приделать маркер с мороженым к карте Google? -->
           <div class="map-contacts">
-          <!-- добавить классы, изменить на блочные элементы -->
-            <p>Адрес главного офиса и офлайн магазина:</p>
-            <div>ул. Большая Конюшенная 19/8, Санкт-Петербург</div>
-            <p>Для заказов по телефону:<span>8 812 450-25-25</span>(с 10 до 20 ежедневно)</p>
+            <p class="map-contacts-normal">Адрес главного офиса и офлайн магазина:</p>
+            <div class="map-contacts-bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</div>
+            <p class="map-contacts-normal">Для заказов по телефону:</p>
+            <div class="map-contacts-bold">8 812 450-25-25</div>
+            <p class="map-contacts-normal">(с 10 до 20 ежедневно)</p>
             <a class="btn" href="#">Форма обратной связи</a>
           </div>
         </div>
         <footer class="main-footer">
           <div class="footer-social">
-          <!--  добавить классы для ссылок -->
             <ul>
               <li>
-                <a href="#">Twitter</a>
+                <a class="social social-twitter" href="#">Twitter</a>
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <a class="social social-instagram" href="#">Instagram</a>
               </li>
               <li>
-                <a href="#">Facebook</a>
+                <a class="social social-facebook" href="#">Facebook</a>
               </li>
               <li>
-                <a href="#">В Контакте</a>
+                <a class="social social-vk" href="#">В Контакте</a>
               </li>
             </ul>
           </div>
