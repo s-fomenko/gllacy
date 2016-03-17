@@ -1,101 +1,260 @@
+body {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Roboto", "Arial", sans-serif;
+
+  background-color: #849d8f;
+}
+
+body > input[type="radio"] {
+  display: none;
+}
+
+.site-wrapper {
+  min-width: 1200px;
+
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.content-wrapper {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+/*=====Слайдер=====*/
+.slider {
+  position: relative;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide {
+  position: relative;
+
+  display: none;
+}
+
+.slide-title {
+  position: absolute;
+  top: 393px;
+  left: 222px;
+
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  /*Откуда берется 800 и roboto black? На Google Font такого нет*/
+
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 60.35px;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 542px;
+  left: 433px;
+
+  display: inline-block;
+  padding: 12px 50px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  /*Я так и не понимаю как смотреть параметры тени в PS.
+  Есть разница между HEX и RGBA?*/
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  /*Почему все автопрефиксеры не ставят moz? Он нужен вообще?*/
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slide-btn:hover {
+  /*Почему все автопрефиксеры не ставят moz? Он нужен вообще?*/
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slide-btn:active {
+  /*Почему все автопрефиксеры не ставят moz? Он нужен вообще?*/
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+  position: absolute;
+  top: 560px;
+  left: 0;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .site-wrapper #slide1,
+#btn-2:checked ~ .site-wrapper #slide2,
+#btn-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#btn-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+}
+
+#btn-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+}
+
+#btn-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+}
+
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  background-color: #ffffff;
+}
+
+/*=====Спрайт=====*/
 .sprite {
+  display: block;
+
   background-image: url(spritesheet.png);
   background-repeat: no-repeat;
-  display: block;
 }
 
 .sprite-checkbox-off {
   width: 20px;
   height: 20px;
+
   background-position: -10px -10px;
 }
 
 .sprite-checkbox-on {
   width: 20px;
   height: 20px;
+
   background-position: -10px -50px;
 }
 
 .sprite-icon-cart {
   width: 21px;
   height: 20px;
+
   background-position: -10px -90px;
 }
 
 .sprite-icon-cow {
   width: 47px;
   height: 47px;
+
   background-position: -10px -130px;
 }
 
 .sprite-icon-fb {
   width: 31px;
   height: 31px;
+
   background-position: -10px -197px;
 }
 
 .sprite-icon-heart {
   width: 15px;
   height: 13px;
+
   background-position: -10px -248px;
 }
 
 .sprite-icon-ice-cream {
   width: 47px;
   height: 47px;
+
   background-position: -10px -281px;
 }
 
 .sprite-icon-instagram {
   width: 31px;
   height: 31px;
+
   background-position: -10px -348px;
 }
 
 .sprite-icon-leaf {
   width: 47px;
   height: 47px;
+
   background-position: -10px -399px;
 }
 
 .sprite-icon-login {
   width: 20px;
   height: 19px;
+
   background-position: -10px -466px;
 }
 
 .sprite-icon-search {
   width: 17px;
   height: 17px;
+
   background-position: -10px -505px;
 }
 
 .sprite-icon-thermometer {
   width: 47px;
   height: 47px;
+
   background-position: -10px -542px;
 }
 
 .sprite-icon-twitter {
   width: 31px;
   height: 31px;
+
   background-position: -10px -609px;
 }
 
 .sprite-icon-vk {
   width: 31px;
   height: 31px;
+
   background-position: -10px -660px;
 }
 
 .sprite-radio-off {
   width: 20px;
   height: 20px;
+
   background-position: -10px -711px;
 }
 
 .sprite-radio-on {
   width: 20px;
   height: 20px;
+
   background-position: -10px -751px;
 }
