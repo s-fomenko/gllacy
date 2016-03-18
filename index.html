@@ -14,8 +14,9 @@
 
     <div class="site-wrapper">
       <div class="content-wrapper">
-        <header class="main-header">
-          <img class="header-logo" src="http://placehold.it/160x65" alt="Gllacy Shop">
+        <header class="main-header clearfix">
+          <!-- Как посмотреть ширину и высоту у svg? В свойствах файла не нашел. -->
+          <img class="header-logo" src="img/main-logo.svg" alt="Gllacy Shop">
 
           <nav class="main-navigation">
             <ul>
@@ -68,17 +69,14 @@
 
         <div class="slider">
           <div class="slide" id="slide1">
-            <img src="./img/slide-picture1.png" alt="Мороженое" width="1045" height="881">
             <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
             <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
           <div class="slide" id="slide2">
-            <img src="./img/slide-picture2.png" alt="Мороженое" width="1046" height="845">
             <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
             <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
           <div class="slide" id="slide3">
-            <img src="./img/slide-picture3.png" alt="Мороженое" width="1046" height="838">
             <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
             <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
@@ -91,13 +89,14 @@
         <main class="main-content">
 
           <section class="goods">
-            <div class="action">
-              <div class="action-item">
+            <div class="action clearfix">
+              <!-- Добавил 1 и 2 потому что фоны разные -->
+              <div class="action-item1">
                 <h2 class="action-header">Малинка даром!</h2>
                 <p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="btn" href="#">Хочу варенье!</a>
               </div>
-              <div class="action-item">
+              <div class="action-item2">
                 <h2 class="action-header">Шоколадки даром!</h2>
                 <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
                 <a class="btn" href="#">Хочу шоколадки!</a>
@@ -107,7 +106,7 @@
             <div class="ice-cream">
               <div class="ice-cream-item">
                 <div>
-                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <img src="img/1.jpg" alt="Мороженое" width="267" height="267">
                   <p class="ice-cream-paragraph"><span>310&#8381;</span>/кг</p>
                 </div>
                 <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -115,7 +114,7 @@
               </div>
               <div class="ice-cream-item">
                 <div>
-                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <img src="img/2.jpg" alt="Мороженое" width="267" height="267">
                   <p class="ice-cream-paragraph"><span>380&#8381;</span>/кг</p>
                 </div>
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -123,7 +122,7 @@
               </div>
               <div class="ice-cream-item">
                 <div>
-                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <img src="img/3.jpg" alt="Мороженое" width="267" height="267">
                   <p class="ice-cream-paragraph"><span>355&#8381;</span>/кг</p>
                 </div>
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -131,7 +130,7 @@
               </div>
               <div class="ice-cream-item">
                 <div>
-                  <img src="http://placehold.it/270x270" alt="Мороженое">
+                  <img src="img/4.jpg" alt="Мороженое" width="267" height="267">
                   <p class="ice-cream-paragraph"><span>415&#8381;</span>/кг</p>
                 </div>
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -155,7 +154,7 @@
             </div>
           </div>
 
-          <div class="news">
+          <div class="news clearfix">
             <div class="news-blog">
               <p>Новое в нашем блоге</p>
               <a href="#"><h3 class="news-header">10 способов сервировки фруктовых щербетов к столу</h3></a>
@@ -169,7 +168,7 @@
             </div>
           </div>
         </main>
-        <div class="map">
+        <div class="map clearfix">
           <!-- Карта Google -->
           <!-- TODO: Как приделать маркер с мороженым к карте Google? -->
           <div class="map-contacts">
@@ -181,7 +180,7 @@
             <a class="btn" href="#">Форма обратной связи</a>
           </div>
         </div>
-        <footer class="main-footer">
+        <footer class="main-footer clearfix">
           <div class="footer-social">
             <ul>
               <li>
@@ -215,7 +214,7 @@
             </ul>
           </div>
           <div class="footer-copyright">
-            <img src="http://placehold.it/120x40" alt="HTML Academy">
+            <img src="img/htmlacademy-logo.png" alt="HTML Academy" width="108" height="37">
             <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &#169; 2016</p>
           </div>
         </footer>

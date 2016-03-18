@@ -10,136 +10,7 @@ body > input[type="radio"] {
   display: none;
 }
 
-.site-wrapper {
-  min-width: 1200px;
-
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.content-wrapper {
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-
-/*=====Слайдер=====*/
-.slider {
-  position: relative;
-
-  text-align: center;
-  color: #ffffff;
-}
-
-.slide {
-  position: relative;
-
-  display: none;
-}
-
-.slide-title {
-  position: absolute;
-  top: 393px;
-  left: 222px;
-
-  width: 700px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  /*Откуда берется 800 и roboto black? На Google Font такого нет*/
-
-  font-weight: 800;
-  font-size: 60px;
-  line-height: 60.35px;
-}
-
-.slide-btn {
-  position: absolute;
-  top: 542px;
-  left: 433px;
-
-  display: inline-block;
-  padding: 12px 50px;
-
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
-  vertical-align: top;
-  color: #ffffff;
-  text-decoration: none;
-  /*Я так и не понимаю как смотреть параметры тени в PS.
-  Есть разница между HEX и RGBA?*/
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-  background: #f26843;
-  /*Почему все автопрефиксеры не ставят moz? Он нужен вообще?*/
-  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 100px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-}
-
-.slide-btn:hover {
-  /*Почему все автопрефиксеры не ставят moz? Он нужен вообще?*/
-  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.slide-btn:active {
-  /*Почему все автопрефиксеры не ставят moz? Он нужен вообще?*/
-  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.slider-controls {
-  position: absolute;
-  top: 560px;
-  left: 0;
-  z-index: 20;
-
-  font-size: 0;
-}
-
-.slider-controls label {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-
-  vertical-align: top;
-
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#btn-1:checked ~ .site-wrapper #slide1,
-#btn-2:checked ~ .site-wrapper #slide2,
-#btn-3:checked ~ .site-wrapper #slide3 {
-  display: block;
-}
-
-#btn-1:checked ~ .site-wrapper {
-  background-color: #849d8f;
-}
-
-#btn-2:checked ~ .site-wrapper {
-  background-color: #8996a6;
-}
-
-#btn-3:checked ~ .site-wrapper {
-  background-color: #9d8b84;
-}
-
-#btn-1:checked ~ .site-wrapper label[for="btn-1"],
-#btn-2:checked ~ .site-wrapper label[for="btn-2"],
-#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
-  background-color: #ffffff;
-}
-
-/*=====Спрайт=====*/
+/*=====Sprite=====*/
 .sprite {
   display: block;
 
@@ -257,4 +128,318 @@ body > input[type="radio"] {
   height: 20px;
 
   background-position: -10px -751px;
+}
+
+/*Не очень понял как сделать страницу резиновой. Давай проговорим это еще раз.*/
+.site-wrapper {
+  min-width: 1200px;
+
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+          transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+/* Псевдоэлементы с изображениями нужны только для предзагрузки картинок, чтобы они уже были в кеше в момент переключения слайдов и сразу отображались */
+
+.site-wrapper:before,
+.site-wrapper:after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+  background-image: url("img/slide-picture1.png");
+}
+
+.site-wrapper:after {
+  background-image: url("img/slide-picture2.png");
+}
+
+.content-wrapper {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+/*=====Slider=====*/
+.slider {
+  position: relative;
+
+  padding-top: 270px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  /*Откуда берется 800 и Roboto Black? На Google Font не нашел такого. */
+
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 60.35px;
+}
+
+.slide-btn {
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 12px 50px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  /*Я пока так и не понял, как посмотреть свойства тени в PS. Есть ли разница в использовании HEX и RGBA?*/
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slide-btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slide-btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .site-wrapper #slide1,
+#btn-2:checked ~ .site-wrapper #slide2,
+#btn-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#btn-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("img/slide-picture1.png");
+}
+
+#btn-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("img/slide-picture2.png");
+}
+
+#btn-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("img/slide-picture3.png");
+}
+
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  background-color: #ffffff;
+}
+
+/*=====Header=====*/
+.header-logo {
+  float: left;
+  width: 165px;
+}
+
+.main-navigation {
+  float: left;
+  width: 600px;
+}
+
+.main-navigation ul {
+  list-style: none;
+  font-size: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 22px;
+  vertical-align: top;
+}
+
+.submenu {
+  display: none;
+}
+
+.user-block {
+  float: right;
+  width: 270px;
+
+  font-size: 0;
+}
+
+.user-block > div {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.header-contacts {
+  float: right;
+}
+
+/*=====Main=====*/
+.action {
+  margin-bottom: 40px;
+}
+
+.action-item1 {
+  float: left;
+  width: 560px;
+  height: 229px;
+  margin-right: 26px;
+
+  background-image: url("img/raspberry-background.png");
+  background-repeat: no-repeat;
+}
+
+.action-item2 {
+  float: left;
+  width: 560px;
+  height: 229px;
+
+  background-image: url("img/chocolate-background.png");
+  background-repeat: no-repeat;
+}
+
+.ice-cream {
+  font-size: 0;
+}
+
+.ice-cream-item {
+  display: inline-block;
+  width: 25%;
+
+  font-size: 16px;
+  line-height: 22px;
+  vertical-align: top;
+}
+
+.ice-cream-item img {
+  border-radius: 50%;
+}
+
+.about {
+  background-image: url("img/waffles-background.jpg");
+  /*background-repeat: no-repeat;*/
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.news-blog {
+  float: left;
+  width: 560px;
+  min-height: 220px;
+
+  background-image: url("img/blog-background.png");
+  background-repeat: no-repeat;
+}
+
+.news-subscription {
+  float: right;
+  width: 560px;
+  min-height: 220px;
+
+  background-image: url("img/mail-background.png");
+  background-repeat: no-repeat;
+}
+
+/*=====Map=====*/
+.map-contacts {
+  float: right;
+  width: 302px;
+}
+
+/*=====Footer=====*/
+.footer-social {
+  float: left;
+  width: 267px;
+  margin-right: 90px;
+}
+
+.footer-social ul {
+  list-style: none;
+  font-size: 0;
+}
+
+.footer-social li {
+  display: inline-block;
+
+  font-size: 13px;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.footer-documents {
+  float: left;
+  width: 350px;
+}
+
+.footer-documents ul {
+  list-style: none;
+  font-size: 0;
+}
+
+.footer-documents li {
+  display: inline-block;
+
+  font-size: 13px;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.footer-copyright {
+  float: right;
+  width: 267px;
+  font-size: 12px;
+  line-height: 1.2;
 }
