@@ -369,10 +369,11 @@ body > input[type="radio"] {
 }
 
 .about {
+  margin-bottom: 40px;
+
   background-image: url("img/waffles-background.jpg");
   /*background-repeat: no-repeat;*/
   border-radius: 15px;
-  margin-bottom: 40px;
 }
 
 .news-blog {
@@ -440,6 +441,29 @@ body > input[type="radio"] {
 .footer-copyright {
   float: right;
   width: 267px;
+
   font-size: 12px;
   line-height: 1.2;
+}
+
+/*=====Catalog=====*/
+.pages {
+  float: right;
+  width: 267px;
+}
+
+.features-select {
+  float: left;
+
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.features-select-item {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1.2;
+  vertical-align: top;
 }
