@@ -15,6 +15,7 @@ body > input[type="radio"] {
   display: block;
 
   background-image: url(spritesheet.png);
+  /* исправить. Как папка с картинками попала в папку css?*/
   background-repeat: no-repeat;
 }
 
@@ -131,6 +132,7 @@ body > input[type="radio"] {
 }
 
 /*Не очень понял как сделать страницу резиновой. Давай проговорим это еще раз.*/
+/* исправить. Пока поставь минимальную ширину в 780 и максимальную в 1200*/
 .site-wrapper {
   min-width: 1200px;
 
@@ -157,6 +159,7 @@ body > input[type="radio"] {
 
 .site-wrapper:after {
   background-image: url("img/slide-picture2.png");
+  /* исправить. опять же папка картинок в папке цсс */
 }
 
 .content-wrapper {
@@ -191,7 +194,7 @@ body > input[type="radio"] {
   margin: 0 auto;
   margin-bottom: 30px;
   /*Откуда берется 800 и Roboto Black? На Google Font не нашел такого. */
-
+/* исправить. отсавь просто roboto */
   font-weight: 800;
   font-size: 60px;
   line-height: 60.35px;
@@ -208,7 +211,9 @@ body > input[type="radio"] {
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
-  /*Я пока так и не понял, как посмотреть свойства тени в PS. Есть ли разница в использовании HEX и RGBA?*/
+  /*Я пока так и не понял, как посмотреть свойства тени в PS. Есть ли разница
+   в использовании HEX и RGBA?*/
+  /* исправить.  есть, rgba прозрачность имеет. Цвет бери по самому тёмному пикселю*/
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   background: #f26843;
@@ -392,12 +397,14 @@ body > input[type="radio"] {
 
   background-image: url("img/mail-background.png");
   background-repeat: no-repeat;
+  /* исправить.  здесь нужно два блока в html, один для обводки, второй для серого фонового цвета http://take.ms/rIutd*/
 }
 
 /*=====Map=====*/
 .map-contacts {
   float: right;
   width: 302px;
+  /* исправить.  посмотри как мы делали блок на карте в нердсе*/
 }
 
 /*=====Footer=====*/
@@ -429,7 +436,7 @@ body > input[type="radio"] {
   list-style: none;
   font-size: 0;
 }
-
+/*исправить. доделать рапсоложение ссылок*/
 .footer-documents li {
   display: inline-block;
 
@@ -451,12 +458,13 @@ body > input[type="radio"] {
   float: right;
   width: 267px;
 }
-
+/*исправить. здесь просто выровнять с помощью text-align right и всё никаких флоат не нужно и clearfix*/
 .features-select {
   float: left;
 
   font-size: 14px;
   line-height: 1.2;
+  /*исправить. странный line-height флоат бузе ширины не есть хорошо*/
 }
 
 .features-select-item {
@@ -467,3 +475,4 @@ body > input[type="radio"] {
   line-height: 1.2;
   vertical-align: top;
 }
+/*исправить для breadcrumbs ссылок нужно задать ещё*/
