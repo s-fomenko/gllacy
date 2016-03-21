@@ -14,8 +14,7 @@ body > input[type="radio"] {
 .sprite {
   display: block;
 
-  background-image: url(spritesheet.png);
-  /* исправить. Как папка с картинками попала в папку css?*/
+  background-image: url("sprite.png");
   background-repeat: no-repeat;
 }
 
@@ -131,10 +130,10 @@ body > input[type="radio"] {
   background-position: -10px -751px;
 }
 
-/*Не очень понял как сделать страницу резиновой. Давай проговорим это еще раз.*/
-/* исправить. Пока поставь минимальную ширину в 780 и максимальную в 1200*/
+/*Почему после того как поставил min и max width вся страница уехала влево?*/
 .site-wrapper {
-  min-width: 1200px;
+  min-width: 780px;
+  max-width: 1200px;
 
   background-repeat: no-repeat;
   background-position: top center;
@@ -142,8 +141,6 @@ body > input[type="radio"] {
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
           transition: background-image 0.5s ease, background-color 0.5s ease;
 }
-
-/* Псевдоэлементы с изображениями нужны только для предзагрузки картинок, чтобы они уже были в кеше в момент переключения слайдов и сразу отображались */
 
 .site-wrapper:before,
 .site-wrapper:after {
@@ -154,12 +151,11 @@ body > input[type="radio"] {
 
 .site-wrapper:before,
 .site-wrapper:after {
-  background-image: url("img/slide-picture1.png");
+  background-image: url("../img/slide-picture1.png");
 }
 
 .site-wrapper:after {
-  background-image: url("img/slide-picture2.png");
-  /* исправить. опять же папка картинок в папке цсс */
+  background-image: url("../img/slide-picture2.png");
 }
 
 .content-wrapper {
@@ -193,9 +189,10 @@ body > input[type="radio"] {
   width: 700px;
   margin: 0 auto;
   margin-bottom: 30px;
-  /*Откуда берется 800 и Roboto Black? На Google Font не нашел такого. */
+
 /* исправить. отсавь просто roboto */
-  font-weight: 800;
+  /*Сделал. Но теперь шрифт не совпадает с макетом. В этом то и вопрос. В макете black, но я не понимаю откуда он берется*/
+  /*font-weight: 800;*/
   font-size: 60px;
   line-height: 60.35px;
 }
@@ -214,6 +211,7 @@ body > input[type="radio"] {
   /*Я пока так и не понял, как посмотреть свойства тени в PS. Есть ли разница
    в использовании HEX и RGBA?*/
   /* исправить.  есть, rgba прозрачность имеет. Цвет бери по самому тёмному пикселю*/
+  /*А что здесь не так?*/
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   background: #f26843;
@@ -266,17 +264,17 @@ body > input[type="radio"] {
 
 #btn-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("img/slide-picture1.png");
+  background-image: url("../img/slide-picture1.png");
 }
 
 #btn-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("img/slide-picture2.png");
+  background-image: url("../img/slide-picture2.png");
 }
 
 #btn-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("img/slide-picture3.png");
+  background-image: url("../img/slide-picture3.png");
 }
 
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
@@ -313,11 +311,10 @@ body > input[type="radio"] {
   display: none;
 }
 
-.user-block {
+.user-block-wrapper {
   float: right;
-  width: 270px;
-
-  font-size: 0;
+  /*width: 270px;*/
+  /*font-size: 0;*/
 }
 
 .user-block > div {
@@ -329,7 +326,7 @@ body > input[type="radio"] {
 }
 
 .header-contacts {
-  float: right;
+  /*float: right;*/
 }
 
 /*=====Main=====*/
@@ -337,22 +334,25 @@ body > input[type="radio"] {
   margin-bottom: 40px;
 }
 
-.action-item1 {
+.action-item {
   float: left;
   width: 560px;
   height: 229px;
+  /* TODO: Не забыть убрать высоту */
   margin-right: 26px;
+}
 
-  background-image: url("img/raspberry-background.png");
+.action-item:last-child {
+  margin-right: 0;
+}
+
+.background-raspberry {
+  background-image: url("../img/raspberry-background.png");
   background-repeat: no-repeat;
 }
 
-.action-item2 {
-  float: left;
-  width: 560px;
-  height: 229px;
-
-  background-image: url("img/chocolate-background.png");
+.background-chocolate {
+  background-image: url("../img/chocolate-background.png");
   background-repeat: no-repeat;
 }
 
@@ -376,7 +376,7 @@ body > input[type="radio"] {
 .about {
   margin-bottom: 40px;
 
-  background-image: url("img/waffles-background.jpg");
+  background-image: url("../img/waffles-background.jpg");
   /*background-repeat: no-repeat;*/
   border-radius: 15px;
 }
@@ -386,25 +386,27 @@ body > input[type="radio"] {
   width: 560px;
   min-height: 220px;
 
-  background-image: url("img/blog-background.png");
+  background-image: url("../img/blog-background.png");
   background-repeat: no-repeat;
 }
+/*Не разобрался как экспортировать прямоугольник*/
 
 .news-subscription {
   float: right;
   width: 560px;
   min-height: 220px;
 
-  background-image: url("img/mail-background.png");
+  background-image: url("../img/mail-background.png");
   background-repeat: no-repeat;
-  /* исправить.  здесь нужно два блока в html, один для обводки, второй для серого фонового цвета http://take.ms/rIutd*/
+  /*Задачу понял: Сделать так чтобы блок с фоном тянулся по вертикали при увеличении количества контента. Про реализацию с двумя блоками в html не понял.*/
 }
 
 /*=====Map=====*/
 .map-contacts {
-  float: right;
+  /*float: right;*/
   width: 302px;
-  /* исправить.  посмотри как мы делали блок на карте в нердсе*/
+  transform: translateX(800px);
+  /*Так?*/
 }
 
 /*=====Footer=====*/
@@ -437,6 +439,7 @@ body > input[type="radio"] {
   font-size: 0;
 }
 /*исправить. доделать рапсоложение ссылок*/
+/*Что именно нужно доделать?*/
 .footer-documents li {
   display: inline-block;
 
@@ -455,16 +458,19 @@ body > input[type="radio"] {
 
 /*=====Catalog=====*/
 .pages {
-  float: right;
-  width: 267px;
+  /*float: right;*/
+  /*width: 267px;*/
+  text-align: right;
 }
-/*исправить. здесь просто выровнять с помощью text-align right и всё никаких флоат не нужно и clearfix*/
-.features-select {
-  float: left;
 
+.features-select {
+  /*float: left;*/
+  display: inline-block;
   font-size: 14px;
   line-height: 1.2;
-  /*исправить. странный line-height флоат бузе ширины не есть хорошо*/
+  /*Заменил float на inline-block. А какой line-height ставить если в макете стоит auto?*/
+  /*Если оставить float и задать ширину блоки не выстраиваются как надо.*/
+
 }
 
 .features-select-item {
@@ -476,3 +482,4 @@ body > input[type="radio"] {
   vertical-align: top;
 }
 /*исправить для breadcrumbs ссылок нужно задать ещё*/
+/*Что именно нужно задать?*/

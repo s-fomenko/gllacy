@@ -11,9 +11,8 @@
     <div class="site-wrapper">
       <div class="content-wrapper">
         <header class="main-header clearfix">
-          <!-- Как посмотреть ширину и высоту у svg? В свойствах файла не нашел. -->
           <a href="index.html">
-            <img class="header-logo" src="img/main-logo.svg" alt="Gllacy Shop">
+            <img class="header-logo" src="img/main-logo.svg" alt="Gllacy Shop" width="165" height="68">
           </a>
 
           <nav class="main-navigation">
@@ -47,21 +46,22 @@
             </ul>
           </nav>
 
-          <div class="user-block">
-            <!-- Нужны ли классы дивам? -->
-            <div>
-              <a class="user-block-item search" href="#">Поиск</a>
+          <div class="user-block-wrapper">
+            <div class="user-block">
+              <div class="user-block1">
+                <a class="user-block-item search" href="#">Поиск</a>
+              </div>
+              <div class="user-block2">
+                <a class="user-block-item login" href="#">Вход</a>
+              </div>
+              <div class="user-block3">
+                <a class="user-block-item cart" href="#">Пусто</a>
+              </div>
             </div>
-            <div>
-              <a class="user-block-item login" href="#">Вход</a>
+            <div class="header-contacts">
+              <p>с 10 до 20, ежедневно<p>
+              <div>8 812 450-25-25</div>
             </div>
-            <div>
-              <a class="user-block-item cart" href="#">Пусто</a>
-            </div>
-          </div>
-          <div class="header-contacts">
-            <p>с 10 до 20, ежедневно<p>
-            <div>8 812 450-25-25</div>
           </div>
         </header>
 
@@ -141,7 +141,7 @@
               <button class="btn features-select" type="submit">Применить</button>
             </form>
           </div>
-          <div class="catalog clearfix">
+          <div class="catalog">
             <div class="ice-cream">
               <div class="ice-cream-item">
                 <div>

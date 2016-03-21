@@ -15,8 +15,7 @@
     <div class="site-wrapper">
       <div class="content-wrapper">
         <header class="main-header clearfix">
-          <!-- Как посмотреть ширину и высоту у svg? В свойствах файла не нашел. -->
-          <img class="header-logo" src="img/main-logo.svg" alt="Gllacy Shop">
+          <img class="header-logo" src="img/main-logo.svg" alt="Gllacy Shop" width="165" height="68">
 
           <nav class="main-navigation">
             <ul>
@@ -49,21 +48,22 @@
             </ul>
           </nav>
 
-          <div class="user-block">
-            <!-- Нужны ли классы дивам? -->
-            <div>
-              <a class="user-block-item search" href="#">Поиск</a>
+          <div class="user-block-wrapper">
+            <div class="user-block">
+              <div class="user-block1">
+                <a class="user-block-item search" href="#">Поиск</a>
+              </div>
+              <div class="user-block2">
+                <a class="user-block-item login" href="#">Вход</a>
+              </div>
+              <div class="user-block3">
+                <a class="user-block-item cart" href="#">Пусто</a>
+              </div>
             </div>
-            <div>
-              <a class="user-block-item login" href="#">Вход</a>
+            <div class="header-contacts">
+              <p>с 10 до 20, ежедневно<p>
+              <div>8 812 450-25-25</div>
             </div>
-            <div>
-              <a class="user-block-item cart" href="#">Пусто</a>
-            </div>
-          </div>
-          <div class="header-contacts">
-            <p>с 10 до 20, ежедневно<p>
-            <div>8 812 450-25-25</div>
           </div>
         </header>
 
@@ -91,12 +91,12 @@
           <section class="goods">
             <div class="action clearfix">
               <!-- Добавил 1 и 2 потому что фоны разные -->
-              <div class="action-item1">
+              <div class="action-item background-raspberry">
                 <h2 class="action-header">Малинка даром!</h2>
                 <p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="btn" href="#">Хочу варенье!</a>
               </div>
-              <div class="action-item2">
+              <div class="action-item background-chocolate">
                 <h2 class="action-header">Шоколадки даром!</h2>
                 <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
                 <a class="btn" href="#">Хочу шоколадки!</a>
@@ -168,7 +168,7 @@
             </div>
           </div>
         </main>
-        <div class="map clearfix">
+        <div class="map">
           <!-- Карта Google -->
           <!-- TODO: Как приделать маркер с мороженым к карте Google? -->
           <div class="map-contacts">
