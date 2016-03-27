@@ -14,7 +14,7 @@ body > input[type="radio"] {
 .sprite {
   display: block;
 
-  background-image: url("sprite.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
 }
 
@@ -130,11 +130,7 @@ body > input[type="radio"] {
   background-position: -10px -751px;
 }
 
-/*Почему после того как поставил min и max width вся страница уехала влево?*/
 .site-wrapper {
-  min-width: 780px;
-  max-width: 1200px;
-
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -159,7 +155,8 @@ body > input[type="radio"] {
 }
 
 .content-wrapper {
-  width: 1146px;
+  min-width: 860px;
+  max-width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
 }
@@ -190,28 +187,22 @@ body > input[type="radio"] {
   margin: 0 auto;
   margin-bottom: 30px;
 
-/* исправить. отсавь просто roboto */
-  /*Сделал. Но теперь шрифт не совпадает с макетом. В этом то и вопрос. В макете black, но я не понимаю откуда он берется*/
-  /*font-weight: 800;*/
+  font-weight: 900;
   font-size: 60px;
   line-height: 60.35px;
 }
 
 .slide-btn {
   display: inline-block;
-  margin-bottom: 40px;
-  padding: 12px 50px;
+  margin-bottom: 43px;
+  padding: 0 45px;
 
   font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
+  font-size: 31.48px;
+  line-height: 62.93px;
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
-  /*Я пока так и не понял, как посмотреть свойства тени в PS. Есть ли разница
-   в использовании HEX и RGBA?*/
-  /* исправить.  есть, rgba прозрачность имеет. Цвет бери по самому тёмному пикселю*/
-  /*А что здесь не так?*/
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   background: #f26843;
@@ -235,7 +226,7 @@ body > input[type="radio"] {
 
 .slider-controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 62px;
   left: 0;
   z-index: 20;
 
@@ -284,27 +275,44 @@ body > input[type="radio"] {
 }
 
 /*=====Header=====*/
+.main-header {
+  margin-bottom: 3px;
+}
+
 .header-logo {
   float: left;
   width: 165px;
+  padding-top: 10px;
 }
 
 .main-navigation {
   float: left;
   width: 600px;
+  padding-top: 28px;
 }
 
 .main-navigation ul {
+  padding: 0;
+  padding-left: 11px;
+
   list-style: none;
   font-size: 0;
 }
 
 .main-navigation li {
   display: inline-block;
+  margin-right: 29px;
 
   font-size: 16px;
   line-height: 22px;
   vertical-align: top;
+}
+
+.main-navigation a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .submenu {
@@ -313,23 +321,130 @@ body > input[type="radio"] {
 
 .user-block-wrapper {
   float: right;
-  /*width: 270px;*/
-  /*font-size: 0;*/
+  width: 290px;
+  padding-top: 23px;
 }
 
-.user-block > div {
+.user-block {
+  margin-bottom: 15px;
+  padding-left: 28px;
+
+  font-size: 0;
+}
+
+.user-block div {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 1.2;
   vertical-align: top;
 }
 
+.user-block1 {
+  width: 32px;
+  height: 32px;
+  margin-right: 11px;
+
+  background-color: #9db1a5;
+  border-radius: 50%;
+}
+
+.user-block1 > a {
+  font-size: 0;
+}
+
+.user-block2 {
+  width: 91px;
+  height: 27px;
+  margin-right: 11px;
+  padding-top: 5px;
+
+  background-color: #9db1a5;
+  border-radius: 30px;
+}
+
+.user-block3 {
+  width: 117px;
+  height: 27px;
+  padding-top: 5px;
+
+  background-color: #9db1a5;
+  border-radius: 30px;
+}
+
+.user-block-item {
+  margin-left: 15px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.search {
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin-top: 7px;
+  margin-left: 7px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -505px;
+}
+
+.login::before {
+  content: "";
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+
+  vertical-align: middle;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -466px;
+}
+
+.cart::before {
+  content: "";
+
+  display: inline-block;
+  width: 21px;
+  height: 20px;
+  margin-right: 7px;
+
+  vertical-align: middle;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -90px;
+}
+
 .header-contacts {
-  /*float: right;*/
+  text-align: right;
+}
+
+.header-contacts > p {
+  margin: 0;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.header-contacts > div {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
 }
 
 /*=====Main=====*/
+.main-content {
+  margin-bottom: 104px;
+}
+
 .action {
   margin-bottom: 40px;
 }
@@ -337,14 +452,98 @@ body > input[type="radio"] {
 .action-item {
   float: left;
   width: 560px;
-  height: 229px;
-  /* TODO: Не забыть убрать высоту */
-  margin-right: 26px;
+  min-height: 229px;
+  margin-right: 25px;
 }
 
 .action-item:last-child {
   margin-right: 0;
 }
+
+.action-header {
+  margin: 0;
+  padding-top: 24px;
+  padding-left: 17px;
+
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.action-paragraph {
+  margin: 0;
+  margin-top: 25px;
+  margin-left: 18px;
+
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.action-btn {
+  display: inline-block;
+  margin-top: 45px;
+  margin-left: 371px;
+  padding: 11px 24px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.action-btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.action-btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.action-btn1 {
+  display: inline-block;
+  margin-top: 39px;
+  margin-left: 348px;
+  padding: 11px 24px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.action-btn1:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.action-btn1:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
 
 .background-raspberry {
   background-image: url("../img/raspberry-background.png");
@@ -357,28 +556,170 @@ body > input[type="radio"] {
 }
 
 .ice-cream {
+  margin-bottom: 38px;
+
   font-size: 0;
 }
 
 .ice-cream-item {
+  position: relative;
+
   display: inline-block;
-  width: 25%;
+  width: 267px;
+  margin-right: 25px;
 
   font-size: 16px;
   line-height: 22px;
   vertical-align: top;
 }
 
+.ice-cream-item:last-child {
+  margin-right: 0;
+}
+
+.ice-cream-hit {
+  margin-bottom: 7px;
+}
+
+.ice-cream-hit::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 61px;
+  height: 61px;
+
+  background-image: url("../img/hit.png");
+  background-repeat: no-repeat;
+}
+
 .ice-cream-item img {
   border-radius: 50%;
 }
 
+.ice-cream-links {
+  text-align: center;
+}
+
+.ice-cream-links a {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ice-cream-paragraph {
+  position: absolute;
+  bottom: 46px;
+
+  font-weight: 800;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.ice-cream-paragraph span {
+  font-size: 45px;
+}
+
+.btn-hidden {
+  display: none;
+}
+
 .about {
+  min-height: 307px;
   margin-bottom: 40px;
 
   background-image: url("../img/waffles-background.jpg");
-  /*background-repeat: no-repeat;*/
   border-radius: 15px;
+}
+
+.about-header {
+  margin: 0;
+  margin-bottom: 22px;
+  padding-top: 24px;
+  padding-left: 20px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.article {
+  position: relative;
+
+  float: left;
+  width: 485px;
+  margin-right: 5px;
+  margin-bottom: 22px;
+  padding-left: 76px;
+
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.article p {
+  margin: 0;
+}
+
+.article-ice-cream::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 19px;
+
+  display: block;
+  width: 47px;
+  height: 47px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -281px;
+}
+
+.article-cow::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 19px;
+
+  display: block;
+  width: 47px;
+  height: 47px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -130px;
+}
+
+.article-leaf::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 19px;
+
+  display: block;
+  width: 47px;
+  height: 47px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -399px;
+}
+
+.article-thermometer::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 19px;
+
+  display: block;
+  width: 47px;
+  height: 47px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -542px;
 }
 
 .news-blog {
@@ -389,24 +730,178 @@ body > input[type="radio"] {
   background-image: url("../img/blog-background.png");
   background-repeat: no-repeat;
 }
-/*Не разобрался как экспортировать прямоугольник*/
+
+.news-blog > p {
+  margin: 0;
+  margin-top: 22px;
+  margin-left: 19px;
+
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+.news-blog > a {
+  color: #353535;
+}
+
+.news-header {
+  margin: 0;
+  margin-top: 4px;
+  margin-left: 18px;
+
+  font-size: 24px;
+  line-height: 29px;
+  color: #353535;
+  text-decoration: none;
+}
 
 .news-subscription {
   float: right;
+  box-sizing: border-box;
   width: 560px;
   min-height: 220px;
+  padding: 5px;
 
-  background-image: url("../img/mail-background.png");
+  background-image: url("../img/mail.jpg");
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.news-subscription-bg {
+  min-height: 183px;
+  padding-top: 27px;
+  padding-left: 21px;
+
+  background: #f8f7f4;
   background-repeat: no-repeat;
-  /*Задачу понял: Сделать так чтобы блок с фоном тянулся по вертикали при увеличении количества контента. Про реализацию с двумя блоками в html не понял.*/
+  border-radius: 15px;
+}
+
+.news-subscription-bg p {
+  margin: 0;
+  margin-bottom: 37px;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: #5a5a5a;
+}
+
+input[type="text"] {
+  width: 356px;
+  height: 37px;
+  padding-left: 8px;
+
+  border-radius: 5px;
+}
+
+.form-btn {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 7px 19px;
+
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24.3px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  outline: none;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.form-btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.form-btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 /*=====Map=====*/
+.map {
+  margin-bottom: 80px;
+}
+
 .map-contacts {
-  /*float: right;*/
-  width: 302px;
-  transform: translateX(800px);
-  /*Так?*/
+  width: 275px;
+  padding-top: 29px;
+  padding-left: 26px;
+
+  background-color: #fefefe;
+  border-radius: 15px;
+  -webkit-transform: translateX(843px);
+          transform: translateX(843px);
+}
+
+.map-contacts-normal {
+  margin: 0;
+  margin-bottom: 2px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #343434;
+}
+
+.map-contacts-bold {
+  margin-bottom: 18px;
+
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  color: #343434;
+}
+
+.map-contacts-phone {
+  margin-bottom: 3px;
+
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  color: #343434;
+}
+
+.contacts-btn {
+  display: inline-block;
+  margin-top: 21px;
+  margin-bottom: 30px;
+  padding: 10px 33px;
+
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24.3px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  outline: none;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.contacts-btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.contacts-btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 /*=====Footer=====*/
@@ -438,8 +933,7 @@ body > input[type="radio"] {
   list-style: none;
   font-size: 0;
 }
-/*исправить. доделать рапсоложение ссылок*/
-/*Что именно нужно доделать?*/
+
 .footer-documents li {
   display: inline-block;
 
@@ -458,19 +952,14 @@ body > input[type="radio"] {
 
 /*=====Catalog=====*/
 .pages {
-  /*float: right;*/
-  /*width: 267px;*/
   text-align: right;
 }
 
 .features-select {
-  /*float: left;*/
   display: inline-block;
-  font-size: 14px;
-  line-height: 1.2;
-  /*Заменил float на inline-block. А какой line-height ставить если в макете стоит auto?*/
-  /*Если оставить float и задать ширину блоки не выстраиваются как надо.*/
 
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .features-select-item {
@@ -481,5 +970,3 @@ body > input[type="radio"] {
   line-height: 1.2;
   vertical-align: top;
 }
-/*исправить для breadcrumbs ссылок нужно задать ещё*/
-/*Что именно нужно задать?*/
