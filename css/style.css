@@ -905,49 +905,153 @@ input[type="text"] {
 }
 
 /*=====Footer=====*/
+.main-footer {
+  padding-bottom: 30px;
+}
+
 .footer-social {
   float: left;
   width: 267px;
-  margin-right: 90px;
+  margin-right: 154px;
+  padding-top: 17px;
 }
 
 .footer-social ul {
+  padding: 0;
+
   list-style: none;
   font-size: 0;
 }
 
 .footer-social li {
   display: inline-block;
+  margin-right: 12px;
 
   font-size: 13px;
-  line-height: 1.2;
+  line-height: 18px;
   vertical-align: top;
+}
+
+.footer-social a {
+  font-size: 0;
+}
+
+.social {
+  display: block;
+  width: 31px;
+  height: 31px;
+
+  border: 3px solid #c2cec7;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.social-twitter {
+  width: 31px;
+  height: 31px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -609px;
+  opacity: 0.8;
+}
+
+.social-instagram {
+  width: 31px;
+  height: 31px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -348px;
+  opacity: 0.8;
+}
+
+.social-facebook {
+  width: 31px;
+  height: 31px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -197px;
+  opacity: 0.8;
+}
+
+.social-vk {
+  width: 31px;
+  height: 31px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -660px;
+  opacity: 0.8;
 }
 
 .footer-documents {
   float: left;
-  width: 350px;
+  width: 348px;
+  padding-top: 15px;
 }
 
 .footer-documents ul {
+  position: relative;
+
+  padding: 0;
+
   list-style: none;
   font-size: 0;
 }
 
 .footer-documents li {
   display: inline-block;
+  margin-right: 31px;
 
   font-size: 13px;
-  line-height: 1.2;
+  line-height: 18px;
   vertical-align: top;
+}
+
+.footer-documents li:nth-child(3) {
+  margin-right: 44px;
+}
+
+.footer-documents a {
+  color: #ffffff;
+}
+
+.heart {
+  font-weight: 900;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -22px;
+
+  display: block;
+  width: 15px;
+  height: 13px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -248px;
 }
 
 .footer-copyright {
   float: right;
-  width: 267px;
+  width: 189px;
 
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+.footer-copyright a {
+  color: #fefefe;
 }
 
 /*=====Catalog=====*/
