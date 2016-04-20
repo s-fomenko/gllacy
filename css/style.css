@@ -286,8 +286,6 @@ body > input[type="radio"] {
 }
 
 .main-navigation {
-  position: relative;
-
   float: left;
   width: 600px;
   padding-top: 28px;
@@ -301,7 +299,7 @@ body > input[type="radio"] {
   font-size: 0;
 }
 
-.main-navigation  li {
+.main-navigation > ul > li {
   display: inline-block;
   margin-right: 29px;
 
@@ -317,11 +315,11 @@ body > input[type="radio"] {
   text-decoration: none;
 }
 
-.main-navigation-hover {
+.topmenu {
   position: relative;
 }
 
-li.main-navigation-hover:hover::after {
+.topmenu:hover::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -335,28 +333,27 @@ li.main-navigation-hover:hover::after {
   border-radius: 30px;
 }
 
-.main-navigation-hover:hover > a {
+.topmenu:hover > a {
   position: relative;
   z-index: 10;
 
   color: #343434;
 }
 
-.main-navigation-hover:hover .submenu {
-  display: block;
-}
-
 .submenu {
   position: absolute;
   top: 32px;
-  left: -20px;
-
+  left: -21px;
   display: none;
   width: 144px;
   margin: 0;
 
   background-color: #f8f7f4;
   border-radius: 5px;
+}
+
+.topmenu:hover .submenu {
+  display: block;
 }
 
 ul.submenu {
