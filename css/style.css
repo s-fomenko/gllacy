@@ -131,27 +131,31 @@ body > input[type="radio"] {
 }
 
 .sprite {
-    background-image: url("../img/hover-sprite.png");
-    background-repeat: no-repeat;
-    display: block;
+  display: block;
+
+  background-image: url("../img/hover-sprite.png");
+  background-repeat: no-repeat;
 }
 
 .sprite-hover-cart {
-    width: 21px;
-    height: 20px;
-    background-position: -10px -10px;
+  width: 21px;
+  height: 20px;
+
+  background-position: -10px -10px;
 }
 
 .sprite-hover-login {
-    width: 20px;
-    height: 19px;
-    background-position: -10px -50px;
+  width: 20px;
+  height: 19px;
+
+  background-position: -10px -50px;
 }
 
 .sprite-hover-search {
-    width: 17px;
-    height: 17px;
-    background-position: -10px -89px;
+  width: 17px;
+  height: 17px;
+
+  background-position: -10px -89px;
 }
 
 .site-wrapper {
@@ -299,10 +303,6 @@ body > input[type="radio"] {
 }
 
 /*=====Header=====*/
-.main-header {
-  margin-bottom: 3px;
-}
-
 .header-logo {
   float: left;
   width: 165px;
@@ -312,64 +312,52 @@ body > input[type="radio"] {
 .main-navigation {
   float: left;
   width: 600px;
-  padding-top: 28px;
+  padding-top: 17px;
 }
 
 .main-navigation ul {
+  position: relative;
+
   padding: 0;
-  padding-left: 11px;
 
   list-style: none;
   font-size: 0;
-  position: relative;
 }
 
 .main-navigation > ul > li {
+  position: relative;
+
   display: inline-block;
-  margin-right: 29px;
+  padding-bottom: 10px;
 
   font-size: 16px;
   line-height: 22px;
   vertical-align: top;
-  position: relative;
 }
 
-.main-navigation a {
+.main-navigation > ul > li > a {
+  display: block;
+  padding: 10px 15px;
+
   font-weight: bold;
   font-size: 16px;
   color: #ffffff;
+}
+
+.main-navigation > ul > li > a:hover {
+  color: #343434;
   text-decoration: none;
-}
-
-li.topmenu {
-  position: relative;
-}
-
-.topmenu:hover::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -13px;
-
-  display: block;
-  width: 87px;
-  height: 32px;
 
   background-color: #f7f6f3;
   border-radius: 30px;
 }
 
-.topmenu:hover > a {
-  position: relative;
-  z-index: 10;
-
-  color: #343434;
-}
-
 .topmenu .submenu {
   position: absolute;
-  top: 32px;
-  left: -21px;
+  top: 43px;
+  left: -8px;
+  z-index: 20;
+
   display: none;
   width: 144px;
   margin: 0;
@@ -378,7 +366,7 @@ li.topmenu {
   border-radius: 5px;
 }
 
-.topmenu:hover .submenu {
+.topmenu li:hover .submenu {
   display: block;
 }
 
@@ -387,37 +375,40 @@ ul.submenu {
 }
 
 .submenu li {
-  position: relative;
-
   display: block;
   margin: 0;
-  padding: 8px 0;
 
   font-size: 14px;
   line-height: 19px;
+
+  border-radius: 5px;
 }
 
-.submenu li:nth-child(3) {
+.submenu li:hover {
   background-color: #fbded9;
 }
 
 .submenu a {
-  padding: 12px 20px;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
   color: #343434;
+  text-decoration: none;
 }
 
 .submenu li:first-child a {
   font-weight: 900;
 }
 
-.submenu li:first-child a::after {
+.submenu li:first-child::after {
   content: "";
   position: absolute;
-  top: 38px;
+  top: 35px;
   left: 6px;
 
   display: block;
@@ -434,54 +425,30 @@ ul.submenu {
 }
 
 .user-block {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding-left: 28px;
 
   font-size: 0;
 }
 
-.user-block div {
+.user-block > div {
   display: inline-block;
 
   font-size: 14px;
   vertical-align: top;
 }
 
-.user-block1 {
-  width: 32px;
-  height: 32px;
-  margin-right: 11px;
-
-  background-color: #9db1a5;
-  border-radius: 50%;
-  position: relative;
-}
-
-.user-block1:hover {
-  background-color: #f8f7f4;
-}
-
-.user-block1:hover .search-field {
-  left: -308px;
-}
-
-.search-field {
-  position: absolute;
-  top: 35px;
-  left: -9999px;
-  padding: 14px;
-  background-color: #f8f7f4;
-  border-radius: 5px;
-}
-
-.search-field input[type="text"] {
-  width: 290px;
+.user-block-item {
   display: block;
-  border-radius: 5px;
+
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.user-block1 > a {
-  font-size: 0;
+.user-block1 {
+  position: relative;
+
+  padding-bottom: 3px;
 }
 
 .user-block2 {
@@ -503,32 +470,49 @@ ul.submenu {
   border-radius: 30px;
 }
 
-.user-block-item {
-  display: block;
-  width: 117px;
-  height: 27px;
-  margin-left: 15px;
+.search-field {
+  position: absolute;
+  top: 35px;
+  left: -308px;
 
-  color: #ffffff;
-  text-decoration: none;
+  display: none;
+  padding: 14px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.search-field input[type="text"] {
+  display: block;
+  width: 290px;
+
+  border-radius: 5px;
+}
+
+.user-block1:hover .search-field {
+  display: block;
 }
 
 .search {
   display: block;
-  width: 17px;
-  height: 17px;
-  margin-top: 7px;
-  margin-left: 7px;
+  width: 32px;
+  height: 32px;
+  margin-right: 11px;
 
+  font-size: 0;
+
+  background-color: #9db1a5;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: -10px -505px;
+  background-position: -2px -499px;
+  border-radius: 50%;
 }
 
 .search:hover {
+  background-color: #f8f7f4;
   background-image: url("../img/hover-sprite.png");
   background-repeat: no-repeat;
-  background-position: -10px -89px;
+  background-position: -3px -82px;
 }
 
 .login::before {
