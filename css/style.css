@@ -958,7 +958,6 @@ td {
 
 .ice-cream-item {
   position: relative;
-
   display: inline-block;
   width: 267px;
   margin-right: 25px;
@@ -966,10 +965,28 @@ td {
   font-size: 16px;
   line-height: 22px;
   vertical-align: top;
+  /*padding-bottom: 82px;*/
 }
 
 .ice-cream-item:nth-child(4n) {
   margin-right: 0;
+}
+
+.ice-cream-item:hover::after {
+  content: "";
+  width: 278px;
+  height: 406px;
+  display: block;
+  background-color: #a7b8ad;
+  border-radius: 5px;
+  position: absolute;
+  top: -6px;
+  left: -4px;
+  opacity: 0.3;
+}
+
+.ice-cream-item:hover .btn-hidden {
+  display: block;
 }
 
 .ice-cream-hit {
@@ -1007,7 +1024,6 @@ td {
 
 .ice-cream-paragraph {
   position: absolute;
-  /*bottom: 46px;*/
   top: 190px;
   font-weight: 800;
   font-size: 30px;
@@ -1020,6 +1036,42 @@ td {
 
 .btn-hidden {
   display: none;
+  position: absolute;
+  top: 303px;
+  left: -305px;
+  z-index: 30;
+}
+
+.btn-hidden {
+  margin-top: 39px;
+  margin-left: 348px;
+  padding: 6px 23px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.btn-hidden:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn-hidden:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .about {
