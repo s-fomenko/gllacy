@@ -953,15 +953,18 @@ td {
 .ice-cream {
   /*margin-bottom: 38px;*/
   position: relative;
+
   font-size: 0;
 }
 
 .ice-cream-item {
   position: relative;
+
   display: inline-block;
   width: 267px;
   margin-right: 25px;
   margin-bottom: 40px;
+
   font-size: 16px;
   line-height: 22px;
   vertical-align: top;
@@ -974,14 +977,16 @@ td {
 
 .ice-cream-item:hover::after {
   content: "";
-  width: 278px;
-  height: 406px;
-  display: block;
-  background-color: #a7b8ad;
-  border-radius: 5px;
   position: absolute;
   top: -6px;
   left: -4px;
+
+  display: block;
+  width: 278px;
+  height: 406px;
+
+  background-color: #a7b8ad;
+  border-radius: 5px;
   opacity: 0.3;
 }
 
@@ -1010,8 +1015,9 @@ td {
 }
 
 .ice-cream-links {
-  text-align: center;
   margin-top: 5px;
+
+  text-align: center;
 }
 
 .ice-cream-links a {
@@ -1025,6 +1031,7 @@ td {
 .ice-cream-paragraph {
   position: absolute;
   top: 190px;
+
   font-weight: 800;
   font-size: 30px;
   color: #ffffff;
@@ -1035,11 +1042,12 @@ td {
 }
 
 .btn-hidden {
-  display: none;
   position: absolute;
   top: 303px;
   left: -305px;
   z-index: 30;
+
+  display: none;
 }
 
 .btn-hidden {
@@ -1543,16 +1551,19 @@ td {
 }
 
 .current {
-  cursor: default;
-  pointer-events: none;
   display: block;
   padding: 10px 15px;
+
   font-weight: bold;
   font-size: 16px;
   color: #ffffff;
   text-decoration: none;
+
   background-color: #d07058;
   border-radius: 30px;
+  cursor: default;
+
+  pointer-events: none;
 }
 
 .main-content-header {
@@ -1567,6 +1578,7 @@ td {
 
 .features {
   position: relative;
+
   margin-bottom: 40px;
 }
 
@@ -1619,36 +1631,43 @@ td {
 }
 
 .range-filter {
+  position: relative;
+
   width: 218px;
   height: 35px;
+
   background-color: #a9b9af;
   border-radius: 20px;
-  position: relative;
 }
 
 .scale {
-  width: 190px;
-  height: 4px;
-  background-color: #d1d9d2;
   position: absolute;
   top: 15px;
   left: 12px;
+
+  width: 190px;
+  height: 4px;
+
+  background-color: #d1d9d2;
 }
 
 .bar {
-  width: 85px;
-  height: 4px;
-  background-color: #f8f7f4;
   position: absolute;
   top: 0;
   left: 37px;
+
+  width: 85px;
+  height: 4px;
+
+  background-color: #f8f7f4;
 }
 
 .toggle {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+
   background-color: #f8f7f4;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -1667,14 +1686,16 @@ td {
 .fat {
   width: 401px;
   height: 29px;
-  background-color: #a9b9af;
-  border-radius: 20px;
+  padding-top: 7px;
+  padding-left: 10px;
+
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
   text-transform: lowercase;
-  padding-top: 7px;
-  padding-left: 10px;
+
+  background-color: #a9b9af;
+  border-radius: 20px;
 }
 
 .fat input[type="radio"] {
@@ -1682,22 +1703,26 @@ td {
 }
 
 .fat input[type="radio"] + label {
-  display: block;
   position: relative;
+
+  display: block;
   padding-left: 30px;
+
   cursor: pointer;
 }
 
 .fat input[type="radio"] + label::before {
   content: "";
   position: absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  background-position: -10px -711px;
   top: 0;
   left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -711px;
 }
 
 .fat input[type="radio"]:checked + label::before {
@@ -1711,14 +1736,16 @@ td {
 .fillers-area {
   width: 685px;
   height: 29px;
-  background-color: #a9b9af;
-  border-radius: 20px;
+  padding-top: 7px;
+  padding-left: 18px;
+
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
   text-transform: lowercase;
-  padding-top: 7px;
-  padding-left: 18px;
+
+  background-color: #a9b9af;
+  border-radius: 20px;
 }
 
 .fillers-area input[type="checkbox"] {
@@ -1726,22 +1753,26 @@ td {
 }
 
 .fillers-area input[type="checkbox"] + label {
-  display: block;
   position: relative;
+
+  display: block;
   padding-left: 30px;
+
   cursor: pointer;
 }
 
 .fillers-area input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  background-position: -10px -10px;
   top: 0;
   left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -10px;
 }
 
 .fillers-area input[type="checkbox"]:checked + label::before {
@@ -1751,46 +1782,54 @@ td {
 .fillers input[type="submit"] {
   width: 138px;
   height: 36px;
-  background-color: #a6b7ae;
-  border-radius: 20px;
+  margin-top: 24px;
+
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  border: 2px solid #fcfcfc;
-  margin-top: 24px;
 
+  background-color: #a6b7ae;
+  border: 2px solid #fcfcfc;
+  border-radius: 20px;
 }
 
 .pages {
-  text-align: right;
   margin-top: 45px;
+
+  text-align: right;
 }
 
 .pages-btn {
+  position: relative;
+
+  display: inline-block;
+  padding: 0 8px;
+
   font-size: 16px;
   line-height: 22px;
+  vertical-align: top;
   color: #ffffff;
   text-decoration: none;
-  position: relative;
-  padding: 0 8px;
-  display: inline-block;
-  vertical-align: top;
 }
 
 .pages .prev {
   font-size: 0;
+
   cursor: default;
+
   pointer-events: none;
 }
 
 .prev::before {
   content: "";
-  background-image: url("../img/prev.png");
-  height: 14px;
-  width: 8px;
   position: absolute;
   top: 3px;
   left: -7px;
+
+  width: 8px;
+  height: 14px;
+
+  background-image: url("../img/prev.png");
 }
 
 .pages .next {
@@ -1799,35 +1838,42 @@ td {
 
 .next::before {
   content: "";
-  background-image: url("../img/next.png");
-  height: 14px;
-  width: 8px;
   position: absolute;
   top: 3px;
   left: 7px;
+
+  width: 8px;
+  height: 14px;
+
+  background-image: url("../img/next.png");
 }
 
 .first {
   height: 25px;
-  border-radius: 50%;
-  background-color: #ffffff;
+
   color: #353535;
+
+  background-color: #ffffff;
+  border-radius: 50%;
   cursor: default;
+
   pointer-events: none;
 }
 
 .features-select {
   display: inline-block;
-  vertical-align: middle;
+  margin-right: 16px;
+
   font-size: 14px;
   line-height: 18px;
-  margin-right: 16px;
+  vertical-align: middle;
 }
 
 .features-select-item {
   display: inline-block;
-  margin-bottom: 20px;
   margin-right: 16px;
+  margin-bottom: 20px;
+
   font-size: 16px;
   line-height: 1.2;
   vertical-align: top;
